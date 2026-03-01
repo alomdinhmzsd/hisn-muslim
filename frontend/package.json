@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "netlify-build": "npm install --include=dev && npm run build"
   },
   "dependencies": {
     "lucide-react": "0.454.0",

@@ -1,13 +1,14 @@
 [build]
   # The directory to run the build command from
   base = "frontend"
-  # The command to run your build
-  command = "npm run build"
+  # Force install dev dependencies then build
+  command = "npm install --include=dev && npm run build"
   # The directory to publish
   publish = ".next"
 
 [build.environment]
   NEXT_USE_NETLIFY_EDGE = "true"
+  NODE_VERSION = "20"  # Specify Node version for consistency
 
 # Optional: Configure branch deploys
 [context.production]
@@ -18,6 +19,3 @@
 
 [context.branch-deploy]
   environment = { NODE_ENV = "production" }
-
-# The Next.js plugin is automatically installed by Netlify
-# No need to add it manually
