@@ -223,7 +223,9 @@ export default function DuaPage() {
       {chapter.duas.map((dua, index) => (
         <audio
           key={`audio-${dua.id || index}`}
-          ref={(el: HTMLAudioElement | null) => audioRefs.current[index] = el}
+          ref={(el: HTMLAudioElement | null) => {
+              if (el) audioRefs.current[index] = el;
+            }}
           src={getAudioPath(index)}
           onEnded={() => handleAudioEnded(index)}
           onPause={() => {
