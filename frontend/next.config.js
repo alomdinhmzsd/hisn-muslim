@@ -8,6 +8,12 @@ const nextConfig = {
     });
     return config;
   },
+  // Add static export for Netlify
+  output: 'export',
+  images: {
+    unoptimized: true, // Required for static export
+  },
+  trailingSlash: true, // Helps with routing
 }
 
 module.exports = nextConfig

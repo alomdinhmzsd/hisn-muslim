@@ -3,12 +3,18 @@
   base = "frontend"
   # Force install dev dependencies then build
   command = "npm install --include=dev && npm run build"
-  # The directory to publish
-  publish = ".next"
+  # The directory to publish (changed from .next to out for static export)
+  publish = "out"
 
 [build.environment]
   NEXT_USE_NETLIFY_EDGE = "true"
   NODE_VERSION = "20"  # Specify Node version for consistency
+
+# Redirect all requests to Next.js for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 # Optional: Configure branch deploys
 [context.production]
