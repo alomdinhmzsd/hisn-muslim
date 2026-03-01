@@ -1,7 +1,7 @@
 // Complete data service for your actual JSON structure
-import rawData from '../data/duaData.json';
-import introductionData from '../data/introduction.json';
-import meritData from '../data/merit.json';
+import rawData from '@/data/duaData.json';
+import introductionData from '@/data/introduction.json';
+import meritData from '@/data/merit.json';
 
 // Define interfaces based on your actual data
 export interface Dua {

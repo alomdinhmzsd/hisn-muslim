@@ -173,7 +173,6 @@ coverage.xml
 *.sqlite
 *.sqlite3
 *.db
-data/
 tmp/
 
 
