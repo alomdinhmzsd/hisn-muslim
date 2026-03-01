@@ -2,7 +2,7 @@
   "name": "hisn-v2",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "netlify-build": "npm install --include=dev && npm run build"
   },

@@ -8,12 +8,10 @@ const nextConfig = {
     });
     return config;
   },
-  // Add static export for Netlify
-  output: 'export',
+  // Remove output: 'export' for dynamic routes
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
-  trailingSlash: true, // Helps with routing
 }
 
 module.exports = nextConfig
