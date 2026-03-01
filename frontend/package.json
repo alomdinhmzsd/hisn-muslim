@@ -1,7 +1,9 @@
 {
   "name": "hisn-v2",
-  "scripts": {
-    "dev": "next dev -p 3041"
+    "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "lucide-react": "0.454.0",
