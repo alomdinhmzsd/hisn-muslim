@@ -1,8 +1,23 @@
 // layout.tsx
 import './globals.css';
+import type { Metadata } from "next";
 import { Star } from 'lucide-react';
 import Link from 'next/link';
 import ClientFavCount from './components/ClientFavCount';
+import InstallPrompt from './components/InstallPrompt'
+
+const APP_NAME = "Hisn Muslim";
+const APP_DESCRIPTION = "Fortress of the Muslim - Duas and Adhkar";
+
+export const metadata: Metadata = {
+  title: APP_NAME,
+  description: APP_DESCRIPTION,
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: APP_NAME,
+  },
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

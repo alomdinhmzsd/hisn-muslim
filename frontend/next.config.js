@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
+const withSerwist = require('@serwist/next')({
+  swSrc: "app/sw.ts",  // Path relative to frontend folder
+  swDest: "public/sw.js",
+});
+
 const nextConfig = {
   // Allow importing JSON files
   webpack: (config) => {
@@ -8,10 +13,9 @@ const nextConfig = {
     });
     return config;
   },
-  // Remove output: 'export' for dynamic routes
   images: {
     unoptimized: true,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = withSerwist(nextConfig);

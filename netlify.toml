@@ -10,7 +10,7 @@
   NEXT_USE_NETLIFY_EDGE = "true"
   NODE_VERSION = "20"  # Specify Node version for consistency
 
-# Use Next.js plugin for dynamic routes
+## Use Next.js plugin for dynamic routes
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
