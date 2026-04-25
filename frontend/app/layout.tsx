@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     title: APP_NAME,
   },
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
